@@ -228,12 +228,75 @@ section img {
   height: 36px;
 }
 
+/* Facebook Section Styles */
+.facebook-section {
+  background: #f8f9fa;
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+}
+
+.facebook-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.facebook-container h2 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.facebook-container p {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.facebook-embed {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.facebook-info {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.facebook-info h3 {
+  color: #ff5722;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.facebook-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.facebook-info li {
+  padding: 0.8rem 0;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.facebook-info li:last-child {
+  border-bottom: none;
+}
+
 footer {
   padding: 1rem;
   background: #f1f1f1;
   color: #777;
   font-size: 0.9rem;
-  margin-top: 2rem;
+  margin-top: 0;
 }
 
 /* -------------------- Responsive -------------------- */
@@ -286,6 +349,26 @@ footer {
 
   .contact-buttons {
     gap: 0.5rem;
+  }
+
+  .facebook-section {
+    padding: 2rem 1rem;
+  }
+
+  .facebook-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .facebook-info {
+    padding: 1.5rem;
+  }
+
+  .facebook-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .facebook-info li {
+    font-size: 1rem;
   }
 
   .steps {
