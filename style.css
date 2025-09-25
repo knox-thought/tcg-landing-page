@@ -257,6 +257,10 @@ section img {
   display: flex;
   justify-content: center;
   margin-bottom: 3rem;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .facebook-info {
@@ -357,6 +361,10 @@ footer {
 
   .facebook-container h2 {
     font-size: 1.5rem;
+  }
+
+  .facebook-embed {
+    max-width: 95%;
   }
 
   .facebook-info {
