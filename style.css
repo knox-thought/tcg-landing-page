@@ -323,6 +323,10 @@ footer {
   .step {
     min-width: 45%; /* 2 คอลัมน์ */
   }
+
+  .facebook-embed {
+    max-width: 95%;
+  }
 }
 
 /* Mobile (<= 768px) */
@@ -369,7 +373,12 @@ footer {
   }
 
   .facebook-embed {
-    max-width: 95%;
+    max-width: 90%;
+  }
+
+  .facebook-embed .fb-page {
+    max-width: 100% !important;
+    width: 100% !important;
   }
 
   .facebook-info {
