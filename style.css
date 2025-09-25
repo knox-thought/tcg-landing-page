@@ -373,8 +373,9 @@ footer {
   }
 
   .facebook-embed {
-    max-width: 98%;
+    max-width: 100%;
     width: 100%;
+    margin: 0 1rem;
   }
 
   .facebook-embed .fb-page {
@@ -384,6 +385,7 @@ footer {
 
   .facebook-info {
     padding: 1.5rem;
+    margin: 0 1rem;
   }
 
   .facebook-info h3 {
