@@ -132,10 +132,13 @@ section img {
 
 .problem-list, .solution-list {
   background: #f8f9fa;
-  padding: 1.5rem;
+  padding: 1.2rem;
   border-radius: 8px;
   margin: 1rem 0;
   border-left: 4px solid #ff5722;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .problem-list {
@@ -156,10 +159,13 @@ section img {
 .cta-box {
   background: linear-gradient(135deg, #ff5722, #e64a19);
   color: white;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 12px;
   text-align: center;
   margin-top: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cta-box p {
@@ -259,6 +265,11 @@ footer {
   }
 
   .cta-box {
-    padding: 1.5rem;
+    padding: 1.2rem;
+    max-width: 90%;
+  }
+
+  .problem-list, .solution-list {
+    max-width: 95%;
   }
 }
