@@ -51,20 +51,60 @@ p {
   margin: 0.5rem 0 1.5rem;
 }
 
-button {
-  margin-top: 1rem;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  color: white;
-  background: #ff5722; /* เปลี่ยนเป็นสีแบรนด์ */
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s ease;
+/* Contact Buttons Styles */
+.contact-buttons {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
 }
 
-button:hover {
-  background: #e64a19;
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-decoration: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 60px;
+  height: 60px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.line-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 185, 0, 0.2);
+}
+
+.phone-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 87, 34, 0.2);
+}
+
+.messenger-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 132, 255, 0.2);
+}
+
+.btn-icon {
+  font-size: 1.2rem;
+}
+
+.btn-text {
+  font-family: 'Noto Sans Thai', sans-serif;
 }
 
 main {
@@ -173,22 +213,19 @@ section img {
   font-size: 1.1rem;
 }
 
-#articleOrderBtn {
-  background: white;
-  color: #ff5722;
-  font-weight: bold;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  border: none;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
+/* CTA Box Contact Buttons */
+.cta-box .contact-buttons {
+  margin-top: 1rem;
 }
 
-#articleOrderBtn:hover {
-  background: #f5f5f5;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+.cta-box .contact-btn {
+  width: 70px;
+  height: 70px;
+}
+
+.cta-box .logo-img {
+  width: 36px;
+  height: 36px;
 }
 
 footer {
@@ -222,9 +259,33 @@ footer {
     font-size: 1.4rem;
   }
 
-  button {
-    width: 90%;
-    font-size: 1rem;
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-btn {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .cta-box .contact-btn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cta-box .logo-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .contact-buttons {
+    gap: 0.5rem;
   }
 
   .steps {

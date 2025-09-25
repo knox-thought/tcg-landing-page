@@ -1,31 +1,38 @@
-// Main Order Button
-document.getElementById("orderBtn").addEventListener("click", function() {
-  console.log("สั่งตรวจเลยถูกกด 🚀");
+// Contact Button Event Tracking
+function trackContactClick(buttonType, location) {
+  console.log(`${buttonType} button clicked 🚀`);
 
   // ส่ง event เข้า GTM
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
-    event: "order_button_click",
-    button_name: "สั่งตรวจเลย",
-    location: "header"
+    event: "contact_button_click",
+    button_type: buttonType,
+    location: location
   });
+}
 
-  // UX Feedback
-  alert("ขอบคุณครับ! ทีมงานจะติดต่อกลับภายใน 24 ชม.");
+// Header Contact Buttons
+document.getElementById("lineBtn").addEventListener("click", function() {
+  trackContactClick("line", "header");
 });
 
-// Article Order Button
-document.getElementById("articleOrderBtn").addEventListener("click", function() {
-  console.log("สั่งตรวจการ์ดเลยถูกกด 🚀");
+document.getElementById("messengerBtn").addEventListener("click", function() {
+  trackContactClick("messenger", "header");
+});
 
-  // ส่ง event เข้า GTM
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    event: "order_button_click",
-    button_name: "สั่งตรวจการ์ดเลย",
-    location: "article"
-  });
+document.getElementById("phoneBtn").addEventListener("click", function() {
+  trackContactClick("phone", "header");
+});
 
-  // UX Feedback
-  alert("ขอบคุณครับ! ทีมงานจะติดต่อกลับภายใน 24 ชม.");
+// Article Contact Buttons
+document.getElementById("articleLineBtn").addEventListener("click", function() {
+  trackContactClick("line", "article");
+});
+
+document.getElementById("articleMessengerBtn").addEventListener("click", function() {
+  trackContactClick("messenger", "article");
+});
+
+document.getElementById("articlePhoneBtn").addEventListener("click", function() {
+  trackContactClick("phone", "article");
 });
