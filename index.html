@@ -8,10 +8,11 @@
   <meta name="description" content="บริการตรวจการ์ด TCG จากญี่ปุ่น ด้วยกล้องจุลทรรศน์ + Blue Light พร้อมรายละเอียดก่อนตัดสินใจยืนยันการรับของจาก Mercari.">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=11" />
+  <link rel="stylesheet" href="style.css?v=3" />
 
   <!-- Google Tag Manager -->
   <script>
@@ -31,128 +32,259 @@
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <header>
-    <nav class="main-nav">
-      <a href="#home" class="nav-link">หน้าแรก</a>
-      <a href="#article-section" class="nav-link">ทำไมต้องตรวจ</a>
-    </nav>
-    
-    <div id="home">
-      <h1>ตรวจการ์ด TCG จากญี่ปุ่น ก่อนกดยืนยัน Mercari</h1>
-      <p>หลักฐานรูป/วิดีโอจากกล้องจุลทรรศน์ + Blue Light ให้คุณมั่นใจก่อนกดรับสินค้า</p>
-      
-      <div class="contact-buttons">
-        <a href="https://line.me/ti/p/~your_line_id" target="_blank" class="contact-btn line-btn" id="lineBtn" title="LINE">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE" class="logo-img">
-        </a>
-        <a href="https://m.me/your_facebook_page" target="_blank" class="contact-btn messenger-btn" id="messengerBtn" title="Facebook Messenger">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Facebook_Messenger_logo_2020.svg" alt="Messenger" class="logo-img">
-        </a>
-        <a href="tel:+66xxxxxxxxx" class="contact-btn phone-btn" id="phoneBtn" title="โทรศัพท์">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Phone_icon.svg" alt="โทร" class="logo-img">
-        </a>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="https://via.placeholder.com/40x40/ff5722/ffffff?text=M" alt="Logo" class="logo-img">
+        <span class="logo-text">MercariCheck</span>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link">หน้าแรก</a>
+        <a href="#steps" class="nav-link">ขั้นตอนการตรวจ</a>
+        <a href="#article-section" class="nav-link">ทำไมต้องตรวจ</a>
+        <a href="#facebook" class="nav-link">ติดตามเรา</a>
+      </div>
+      <div class="nav-toggle" id="nav-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <main>
-    <section>
-      <h2>ขั้นตอนการตรวจ</h2>
-      <div class="steps">
-        <div class="step">1) ส่งลิงก์ Mercari</div>
-        <div class="step">2) ทีมที่ญี่ปุ่นรับของ</div>
-        <div class="step">3) ตรวจด้วยอุปกรณ์</div>
-        <div class="step">4) ส่งรายงานให้ตัดสินใจ</div>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <h1 class="hero-title">ตรวจการ์ด TCG จากญี่ปุ่น ก่อนกดยืนยัน Mercari</h1>
+        <p class="hero-subtitle">หลักฐานรูป/วิดีโอจากกล้องจุลทรรศน์ + Blue Light ให้คุณมั่นใจก่อนกดรับสินค้า</p>
+        
+        <div class="contact-buttons">
+          <a href="https://line.me/ti/p/~your_line_id" target="_blank" class="contact-btn line-btn" id="lineBtn" title="LINE">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE" class="logo-img">
+            <span>LINE</span>
+          </a>
+          <a href="https://m.me/your_facebook_page" target="_blank" class="contact-btn messenger-btn" id="messengerBtn" title="Facebook Messenger">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Facebook_Messenger_logo_2020.svg" alt="Messenger" class="logo-img">
+            <span>Messenger</span>
+          </a>
+          <a href="tel:+66xxxxxxxxx" class="contact-btn phone-btn" id="phoneBtn" title="โทรศัพท์">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Phone_icon.svg" alt="โทร" class="logo-img">
+            <span>โทร</span>
+          </a>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section>
-      <h2>ตัวอย่างรายงานตรวจ</h2>
-      <img src="https://via.placeholder.com/600x400" alt="ตัวอย่างรายงานตรวจการ์ด" />
-      <p>ภาพขอบ/พื้นผิว/ฮอโล + Timestamp + Serial (ถ้ามี PSA slab)</p>
-    </section>
+  <!-- Steps Section -->
+  <section id="steps" class="steps-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">ขั้นตอนการตรวจ</h2>
+        <p class="section-subtitle">กระบวนการตรวจสอบที่เรียบง่ายและรวดเร็ว</p>
+      </div>
+      
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-icon">📋</div>
+          <div class="step-number">1</div>
+          <h3 class="step-title">ส่งลิงก์ Mercari</h3>
+          <p class="step-description">ส่งลิงก์สินค้าที่ต้องการตรวจสอบ</p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-icon">📦</div>
+          <div class="step-number">2</div>
+          <h3 class="step-title">ทีมที่ญี่ปุ่นรับของ</h3>
+          <p class="step-description">ทีมงานของเราจะรับสินค้าจากผู้ขาย</p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-icon">🔍</div>
+          <div class="step-number">3</div>
+          <h3 class="step-title">ตรวจด้วยอุปกรณ์</h3>
+          <p class="step-description">ตรวจสอบด้วยกล้องจุลทรรศน์และ Blue Light</p>
+        </div>
+        
+        <div class="step-card">
+          <div class="step-icon">📊</div>
+          <div class="step-number">4</div>
+          <h3 class="step-title">ส่งรายงานให้ตัดสินใจ</h3>
+          <p class="step-description">รับรายงานพร้อมภาพและวิดีโอ</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="article-section">
-      <h2>ทำไมต้องตรวจการ์ดก่อนรับของจาก Mercari?</h2>
+  <!-- Report Example Section -->
+  <section class="report-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">ตัวอย่างรายงานตรวจ</h2>
+        <p class="section-subtitle">รายงานละเอียดพร้อมหลักฐานภาพ</p>
+      </div>
+      
+      <div class="report-content">
+        <div class="report-image">
+          <img src="https://via.placeholder.com/600x400" alt="ตัวอย่างรายงานตรวจการ์ด" />
+        </div>
+        <div class="report-description">
+          <p>ภาพขอบ/พื้นผิว/ฮอโล + Timestamp + Serial (ถ้ามี PSA slab)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Article Section -->
+  <section id="article-section" class="article-section">
+    <div class="container">
       <div class="article-content">
-        <div class="article-text">
-          <h3>🚨 ปัญหาของระบบ Mercari</h3>
-          <p>เว็บไซต์บางเว็บออกแบบมาสำหรับการขายภายในประเทศญี่ปุ่น เมื่อซื้อของผ่านเพจรับกดหรือตัวแทน พวกเขาต้องกดรับของโดยอัตโนมัติเพราะ:</p>
-          
-          <ul class="problem-list">
-            <li>📦 ของจะต้องส่งถึงคลังสินค้าโดยตรง</li>
-            <li>⏰ ระบบให้เวลาจำกัดในการกดรับของ</li>
-            <li>🚫 ไม่สามารถตรวจสอบคุณภาพก่อนได้</li>
-            <li>💸 เสี่ยงเจอของปลอม/ของสอดไส้</li>
-            <li>🚫 หากพบปัญหาลูกค้าไม่สามาถทำอะไรได้/เกิดความเสียหาย</li>
-          </ul>
-
-          <h3>💡 วิธีแก้ไขด้วยระบบ TCG-JJPre Check</h3>
-          <p>เราให้บริการตรวจการ์ดก่อนกดรับของ เพื่อให้คุณตรวจสอบก่อนตัดสินใจ:</p>
-          
-          <ul class="solution-list">
-            <li>🔍 ตรวจด้วยกล้องจุลทรรศน์ + Blue Light</li>
-            <li>📸 รายงานภาพและวิดีโอชัดเจน</li>
-            <li>⚡ ผลตรวจภายใน 24 ชั่วโมง</li>
-            <li>🛡️ ช่วยทำเรื่องคืนเงินถ้าเจอของปลอม</li>
-          </ul>
-
-          <div class="cta-box">
-            <p><strong>อย่าเสี่ยงกับเงินที่หามาอย่างยากลำบาก!</strong></p>
+        <div class="section-header">
+          <h2 class="section-title">ทำไมต้องตรวจการ์ดก่อนรับของจาก Mercari?</h2>
+        </div>
+        
+        <div class="article-grid">
+          <div class="problem-section">
+            <h3 class="section-subtitle problem-title">🚨 ปัญหาของระบบ Mercari</h3>
+            <p>เว็บไซต์บางเว็บออกแบบมาสำหรับการขายภายในประเทศญี่ปุ่น เมื่อซื้อของผ่านเพจรับกดหรือตัวแทน พวกเขาต้องกดรับของโดยอัตโนมัติเพราะ:</p>
             
+            <div class="problem-list">
+              <div class="problem-item">
+                <div class="problem-icon">📦</div>
+                <p>ของจะต้องส่งถึงคลังสินค้าโดยตรง</p>
+              </div>
+              <div class="problem-item">
+                <div class="problem-icon">⏰</div>
+                <p>ระบบให้เวลาจำกัดในการกดรับของ</p>
+              </div>
+              <div class="problem-item">
+                <div class="problem-icon">🚫</div>
+                <p>ไม่สามารถตรวจสอบคุณภาพก่อนได้</p>
+              </div>
+              <div class="problem-item">
+                <div class="problem-icon">💸</div>
+                <p>เสี่ยงเจอของปลอม/ของสอดไส้</p>
+              </div>
+              <div class="problem-item">
+                <div class="problem-icon">⚠️</div>
+                <p>หากพบปัญหาลูกค้าไม่สามารถทำอะไรได้/เกิดความเสียหาย</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="solution-section">
+            <h3 class="section-subtitle solution-title">💡 วิธีแก้ไขด้วยระบบ TCG-JJPre Check</h3>
+            <p>เราให้บริการตรวจการ์ดก่อนกดรับของ เพื่อให้คุณตรวจสอบก่อนตัดสินใจ:</p>
+            
+            <div class="solution-list">
+              <div class="solution-item">
+                <div class="solution-icon">🔍</div>
+                <p>ตรวจด้วยกล้องจุลทรรศน์ + Blue Light</p>
+              </div>
+              <div class="solution-item">
+                <div class="solution-icon">📸</div>
+                <p>รายงานภาพและวิดีโอชัดเจน</p>
+              </div>
+              <div class="solution-item">
+                <div class="solution-icon">⚡</div>
+                <p>ผลตรวจภายใน 24 ชั่วโมง</p>
+              </div>
+              <div class="solution-item">
+                <div class="solution-icon">🛡️</div>
+                <p>ช่วยทำเรื่องคืนเงินถ้าเจอของปลอม</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-section">
+          <div class="cta-box">
+            <h3 class="cta-title">อย่าเสี่ยงกับเงินที่หามาอย่างยากลำบาก!</h3>
             <div class="contact-buttons">
               <a href="https://line.me/ti/p/~your_line_id" target="_blank" class="contact-btn line-btn" id="articleLineBtn" title="LINE">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE" class="logo-img">
+                <span>LINE</span>
               </a>
               <a href="https://m.me/your_facebook_page" target="_blank" class="contact-btn messenger-btn" id="articleMessengerBtn" title="Facebook Messenger">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Facebook_Messenger_logo_2020.svg" alt="Messenger" class="logo-img">
+                <span>Messenger</span>
               </a>
               <a href="tel:+66xxxxxxxxx" class="contact-btn phone-btn" id="articlePhoneBtn" title="โทรศัพท์">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Phone_icon.svg" alt="โทร" class="logo-img">
+                <span>โทร</span>
               </a>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <!-- Facebook Page Section -->
-  <section class="facebook-section">
-    <div class="facebook-container">
-      <h2>ติดตามเราได้ที่ Facebook</h2>
-      <p>ดูรีวิวและผลงานจริงของเรา</p>
-      
-      <div class="facebook-embed">
-        <div class="fb-page" 
-             data-href="https://www.facebook.com/JJPreJapan" 
-             data-tabs="timeline,events,messages" 
-             data-width="800" 
-             data-height="700" 
-             data-small-header="false" 
-             data-adapt-container-width="true" 
-             data-hide-cover="false" 
-             data-show-facepile="true">
-          <blockquote cite="https://www.facebook.com/JJPreJapan" class="fb-xfbml-parse-ignore">
-            <a href="https://www.facebook.com/JJPreJapan">JJPre Japan</a>
-          </blockquote>
-        </div>
+  <section id="facebook" class="facebook-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">ติดตามเราได้ที่ Facebook</h2>
+        <p class="section-subtitle">ดูรีวิวและผลงานจริงของเรา</p>
       </div>
       
-      <div class="facebook-info">
-        <h3>🏆 ทำไมต้องเลือกเรา?</h3>
-        <ul>
-          <li>✅ มีประสบการณ์เกี่ยวกับการสั่งซื้อและการคืนสินค้ามากกว่า 5 ปี</li>
-          <li>✅ อุปกรณ์ตรวจระดับมืออาชีพ</li>
-          <li>✅ รีวิวจริงจากลูกค้าใน Facebook</li>
-          <li>✅ รับประกันความพึงพอใจ</li>
-        </ul>
+      <div class="facebook-content">
+        <div class="facebook-embed">
+          <div class="fb-page" 
+               data-href="https://www.facebook.com/JJPreJapan" 
+               data-tabs="timeline,events,messages" 
+               data-width="800" 
+               data-height="700" 
+               data-small-header="false" 
+               data-adapt-container-width="true" 
+               data-hide-cover="false" 
+               data-show-facepile="true">
+            <blockquote cite="https://www.facebook.com/JJPreJapan" class="fb-xfbml-parse-ignore">
+              <a href="https://www.facebook.com/JJPreJapan">JJPre Japan</a>
+            </blockquote>
+          </div>
+        </div>
+        
+        <div class="facebook-info">
+          <h3 class="info-title">🏆 ทำไมต้องเลือกเรา?</h3>
+          <div class="info-list">
+            <div class="info-item">
+              <div class="info-icon">✅</div>
+              <p>มีประสบการณ์เกี่ยวกับการสั่งซื้อและการคืนสินค้ามากกว่า 5 ปี</p>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">✅</div>
+              <p>อุปกรณ์ตรวจระดับมืออาชีพ</p>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">✅</div>
+              <p>รีวิวจริงจากลูกค้าใน Facebook</p>
+            </div>
+            <div class="info-item">
+              <div class="info-icon">✅</div>
+              <p>รับประกันความพึงพอใจ</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer>
-    © 2025 TCG-JJPre Japan Service
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="https://via.placeholder.com/32x32/ff5722/ffffff?text=M" alt="Logo" class="logo-img">
+          <span class="logo-text">MercariCheck</span>
+        </div>
+        <div class="footer-text">
+          © 2025 TCG-JJPre Japan Service
+        </div>
+      </div>
+    </div>
   </footer>
 
   <!-- Facebook SDK -->
@@ -160,6 +292,6 @@
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v18.0" nonce=""></script>
 
   <!-- JS -->
-  <script src="script.js?v=11"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
