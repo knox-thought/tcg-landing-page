@@ -1,120 +1,120 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    background-color: #f9fafb;
-    color: #333;
-  }
-  
-  header {
-    padding: 2rem;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
+  font-family: 'Noto Sans Thai', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f9fafb;
+  color: #333;
+}
+
+header {
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}
+
+p {
+  margin: 0.5rem 0 1.5rem;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  color: white;
+  background: #ff5722; /* เปลี่ยนเป็นสีแบรนด์ */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #e64a19;
+}
+
+main {
+  padding: 2rem;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.step {
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-weight: bold;
+  min-width: 150px;
+}
+
+section img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+footer {
+  padding: 1rem;
+  background: #f1f1f1;
+  color: #777;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* -------------------- Responsive -------------------- */
+
+/* Tablet (<= 1024px) */
+@media (max-width: 1024px) {
   h1 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
   }
-  
-  h2 {
-    margin-top: 2rem;
+
+  .steps {
+    gap: 0.8rem;
+  }
+
+  .step {
+    min-width: 45%; /* 2 คอลัมน์ */
+  }
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  h1 {
     font-size: 1.4rem;
   }
-  
-  p {
-    margin: 0.5rem 0 1.5rem;
-  }
-  
+
   button {
-    margin-top: 1rem;
-    padding: 0.8rem 1.5rem;
+    width: 90%;
     font-size: 1rem;
-    color: white;
-    background: #1a73e8;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
   }
-  
-  button:hover {
-    background: #1557b0;
-  }
-  
-  main {
-    padding: 2rem;
-  }
-  
+
   .steps {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .step {
-    background: #fff;
-    padding: 1rem 1.5rem;
-    border-radius: 6px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    font-weight: bold;
-    min-width: 150px;
+    width: 80%; /* กล่องเต็มเกือบจอ */
+    margin-bottom: 1rem;
   }
-  
-  section img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 1rem;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  }
-  
-  footer {
-    padding: 1rem;
-    background: #f1f1f1;
-    color: #777;
-    font-size: 0.9rem;
-    margin-top: 2rem;
-  }
-  
-  /* -------------------- Responsive -------------------- */
-  
-  /* Tablet (จอ <= 1024px) */
-  @media (max-width: 1024px) {
-    h1 {
-      font-size: 1.6rem;
-    }
-  
-    .steps {
-      gap: 0.8rem;
-    }
-  
-    .step {
-      min-width: 45%; /* 2 คอลัมน์ */
-    }
-  }
-  
-  /* Mobile (จอ <= 768px) */
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 1.4rem;
-    }
-  
-    button {
-      width: 90%;
-      font-size: 1rem;
-    }
-  
-    .steps {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .step {
-      width: 80%; /* กล่องเต็มเกือบจอ */
-      margin-bottom: 1rem;
-    }
-  }
-  
+}
