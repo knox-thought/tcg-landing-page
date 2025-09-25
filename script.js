@@ -36,3 +36,10 @@ document.getElementById("articleMessengerBtn").addEventListener("click", functio
 document.getElementById("articlePhoneBtn").addEventListener("click", function() {
   trackContactClick("phone", "article");
 });
+
+// Force Facebook widget to re-render
+window.addEventListener('load', function() {
+  if (typeof FB !== 'undefined') {
+    FB.XFBML.parse();
+  }
+});
