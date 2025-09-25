@@ -365,7 +365,7 @@ footer {
   }
 
   .facebook-section {
-    padding: 2rem 1rem;
+    padding: 2rem 0.5rem;
   }
 
   .facebook-container h2 {
@@ -373,7 +373,8 @@ footer {
   }
 
   .facebook-embed {
-    max-width: 95%;
+    max-width: 98%;
+    width: 100%;
   }
 
   .facebook-embed .fb-page {
