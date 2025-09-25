@@ -8,11 +8,11 @@
   <meta name="description" content="บริการตรวจการ์ด TCG จากญี่ปุ่น ด้วยกล้องจุลทรรศน์ + Blue Light พร้อมรายละเอียดก่อนตัดสินใจยืนยันการรับของจาก Mercari.">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="style.css?v=3" />
+  <link rel="stylesheet" href="style.css?v=4" />
 
   <!-- Google Tag Manager -->
   <script>
@@ -32,11 +32,11 @@
   </noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Navigation -->
+  <!-- Top Navigation -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-logo">
-        <img src="https://via.placeholder.com/40x40/ff5722/ffffff?text=M" alt="Logo" class="logo-img">
+        <img src="https://via.placeholder.com/45x45/ff5722/ffffff?text=TCG" alt="TCG-Check Logo" class="logo-img">
         <span class="logo-text">TCG-Check</span>
       </div>
       <div class="nav-menu" id="nav-menu">
@@ -55,24 +55,27 @@
 
   <!-- Hero Section -->
   <section id="home" class="hero">
+    <div class="hero-background"></div>
     <div class="hero-container">
       <div class="hero-content">
         <h1 class="hero-title">ตรวจการ์ด TCG จากญี่ปุ่น ก่อนกดยืนยัน Mercari</h1>
         <p class="hero-subtitle">หลักฐานรูป/วิดีโอจากกล้องจุลทรรศน์ + Blue Light ให้คุณมั่นใจก่อนกดรับสินค้า</p>
         
-        <div class="contact-buttons">
-          <a href="https://line.me/ti/p/~your_line_id" target="_blank" class="contact-btn line-btn" id="lineBtn" title="LINE">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE" class="logo-img">
-            <span>LINE</span>
-          </a>
-          <a href="https://m.me/your_facebook_page" target="_blank" class="contact-btn messenger-btn" id="messengerBtn" title="Facebook Messenger">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Facebook_Messenger_logo_2020.svg" alt="Messenger" class="logo-img">
-            <span>Messenger</span>
-          </a>
-          <a href="tel:+66xxxxxxxxx" class="contact-btn phone-btn" id="phoneBtn" title="โทรศัพท์">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Phone_icon.svg" alt="โทร" class="logo-img">
-            <span>โทร</span>
-          </a>
+        <div class="hero-cta">
+          <div class="contact-buttons">
+            <a href="https://line.me/ti/p/~your_line_id" target="_blank" class="contact-btn line-btn" id="lineBtn" title="LINE">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE" class="logo-img">
+              <span>LINE</span>
+            </a>
+            <a href="https://m.me/your_facebook_page" target="_blank" class="contact-btn messenger-btn" id="messengerBtn" title="Facebook Messenger">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Facebook_Messenger_logo_2020.svg" alt="Messenger" class="logo-img">
+              <span>Messenger</span>
+            </a>
+            <a href="tel:+66xxxxxxxxx" class="contact-btn phone-btn" id="phoneBtn" title="โทรศัพท์">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Phone_icon.svg" alt="โทร" class="logo-img">
+              <span>โทร</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -88,35 +91,51 @@
       
       <div class="steps-grid">
         <div class="step-card">
-          <div class="step-icon">📋</div>
-          <div class="step-number">1</div>
-          <h3 class="step-title">ส่งลิงก์ Mercari</h3>
-          <p class="step-description">ส่งลิงก์สินค้าที่ต้องการตรวจสอบ</p>
+          <div class="step-icon">
+            <span class="icon">📋</span>
+          </div>
+          <div class="step-content">
+            <div class="step-number">1</div>
+            <h3 class="step-title">ส่งลิงก์ Mercari</h3>
+            <p class="step-description">ส่งลิงก์สินค้าที่ต้องการตรวจสอบ</p>
+          </div>
         </div>
         
         <div class="step-card">
-          <div class="step-icon">📦</div>
-          <div class="step-number">2</div>
-          <h3 class="step-title">ทีมที่ญี่ปุ่นรับของ</h3>
-          <p class="step-description">ทีมงานของเราจะรับสินค้าจากผู้ขาย</p>
+          <div class="step-icon">
+            <span class="icon">📦</span>
+          </div>
+          <div class="step-content">
+            <div class="step-number">2</div>
+            <h3 class="step-title">ทีมที่ญี่ปุ่นรับของ</h3>
+            <p class="step-description">ทีมงานของเราจะรับสินค้าจากผู้ขาย</p>
+          </div>
         </div>
         
         <div class="step-card">
-          <div class="step-icon">🔍</div>
-          <div class="step-number">3</div>
-          <h3 class="step-title">ตรวจด้วยอุปกรณ์</h3>
-          <p class="step-description">ตรวจสอบด้วยกล้องจุลทรรศน์และ Blue Light</p>
+          <div class="step-icon">
+            <span class="icon">🔍</span>
+          </div>
+          <div class="step-content">
+            <div class="step-number">3</div>
+            <h3 class="step-title">ตรวจด้วยอุปกรณ์</h3>
+            <p class="step-description">ตรวจสอบด้วยกล้องจุลทรรศน์และ Blue Light</p>
+          </div>
         </div>
         
         <div class="step-card">
-          <div class="step-icon">📊</div>
-          <div class="step-number">4</div>
-          <h3 class="step-title">ส่งรายงานให้ตัดสินใจ</h3>
-          <p class="step-description">รับรายงานพร้อมภาพและวิดีโอ</p>
+          <div class="step-icon">
+            <span class="icon">📊</span>
+          </div>
+          <div class="step-content">
+            <div class="step-number">4</div>
+            <h3 class="step-title">ส่งรายงานให้ตัดสินใจ</h3>
+            <p class="step-description">รับรายงานพร้อมภาพและวิดีโอ</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+      </div>
+    </section>
 
   <!-- Report Example Section -->
   <section class="report-section">
@@ -128,10 +147,10 @@
       
       <div class="report-content">
         <div class="report-image">
-          <img src="https://via.placeholder.com/600x400" alt="ตัวอย่างรายงานตรวจการ์ด" />
+      <img src="https://via.placeholder.com/600x400" alt="ตัวอย่างรายงานตรวจการ์ด" />
         </div>
         <div class="report-description">
-          <p>ภาพขอบ/พื้นผิว/ฮอโล + Timestamp + Serial (ถ้ามี PSA slab)</p>
+      <p>ภาพขอบ/พื้นผิว/ฮอโล + Timestamp + Serial (ถ้ามี PSA slab)</p>
         </div>
       </div>
     </div>
@@ -270,14 +289,14 @@
         </div>
       </div>
     </div>
-  </section>
+    </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
+    <div class="footer-container">
       <div class="footer-content">
         <div class="footer-logo">
-          <img src="https://via.placeholder.com/32x32/ff5722/ffffff?text=M" alt="Logo" class="logo-img">
+          <img src="https://via.placeholder.com/35x35/ff5722/ffffff?text=TCG" alt="TCG-Check Logo" class="logo-img">
           <span class="logo-text">TCG-Check</span>
         </div>
         <div class="footer-text">
@@ -292,6 +311,6 @@
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v18.0" nonce=""></script>
 
   <!-- JS -->
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
