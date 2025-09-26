@@ -5,7 +5,24 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ตรวจการ์ด TCG จากญี่ปุ่น – TCG JJPre Protect</title>
 
-  <meta name="description" content="บริการตรวจการ์ด TCG จากญี่ปุ่น ด้วยกล้องจุลทรรศน์ + Blue Light พร้อมรายละเอียดก่อนตัดสินใจยืนยันการรับของจาก Mercari.">
+  <meta name="description" content="บริการตรวจการ์ด TCG จาก Mercari ญี่ปุ่น ตรวจสอบด้วยกล้องจุลทรรศน์และ Blue Light มั่นใจก่อนกดรับสินค้า">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://tcg-jjpre.knox-thought.com/">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="ตรวจการ์ด TCG จากญี่ปุ่น – TCG JJPre Protect">
+  <meta property="og:description" content="บริการตรวจการ์ด TCG จาก Mercari ญี่ปุ่น ตรวจสอบด้วยกล้องจุลทรรศน์และ Blue Light มั่นใจก่อนกดรับสินค้า">
+  <meta property="og:image" content="https://tcg-jjpre.knox-thought.com/images/tcg-og.png">
+  <meta property="og:url" content="https://tcg-jjpre.knox-thought.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TCG JJPre Protect">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ตรวจการ์ด TCG จากญี่ปุ่น – TCG JJPre Protect">
+  <meta name="twitter:description" content="บริการตรวจการ์ด TCG จาก Mercari ญี่ปุ่น ตรวจสอบด้วยกล้องจุลทรรศน์และ Blue Light มั่นใจก่อนกดรับสินค้า">
+  <meta name="twitter:image" content="https://tcg-jjpre.knox-thought.com/images/tcg-og.png">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -13,6 +30,24 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css?v=4" />
+
+  <!-- Structured Data - Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "TCG JJPre Protect",
+    "description": "บริการตรวจการ์ด TCG จาก Mercari ญี่ปุ่น ตรวจสอบด้วยกล้องจุลทรรศน์และ Blue Light มั่นใจก่อนกดรับสินค้า",
+    "provider": {
+      "@type": "Organization",
+      "name": "JJPre",
+      "logo": "https://tcg-jjpre.knox-thought.com/images/logos/tcg-logo.png",
+      "url": "https://tcg-jjpre.knox-thought.com/"
+    },
+    "image": "https://tcg-jjpre.knox-thought.com/images/tcg-og.png",
+    "url": "https://tcg-jjpre.knox-thought.com/"
+  }
+  </script>
 
   <!-- Google Tag Manager -->
   <script>
@@ -33,11 +68,11 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <!-- Top Navigation -->
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="หลัก">
     <div class="nav-container">
       <div class="nav-logo">
         <div class="logo-container">
-          <img src="images/logos/tcg-logo.png" alt="TCG JJPre Protect Logo" class="logo-img">
+          <img src="images/logos/tcg-logo.png" alt="โลโก้ TCG JJPre Protect" class="logo-img">
         </div>
         <span class="logo-text">TCG JJPre Protect</span>
       </div>
@@ -47,7 +82,7 @@
         <a href="#article-section" class="nav-link">ทำไมต้องตรวจ</a>
         <a href="#facebook" class="nav-link">ติดตามเรา</a>
       </div>
-      <div class="nav-toggle" id="nav-toggle">
+      <div class="nav-toggle" id="nav-toggle" aria-label="เปิดเมนู" role="button" tabindex="0">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -65,16 +100,16 @@
         
         <div class="hero-cta">
           <div class="contact-buttons">
-            <a href="https://line.me/ti/p/~your_line_id" target="_blank" class="contact-btn line-btn" id="lineBtn" title="LINE">
-              <img src="images/icons/line-logo.png" alt="LINE" class="logo-img">
+            <a href="https://line.me/ti/p/~your_line_id" target="_blank" class="contact-btn line-btn" id="lineBtn" title="ติดต่อผ่าน LINE" aria-label="ติดต่อผ่าน LINE">
+              <img src="images/icons/line-logo.png" alt="โลโก้ LINE สำหรับติดต่อบริการตรวจการ์ด" class="logo-img">
               <span>LINE</span>
             </a>
-            <a href="https://m.me/your_facebook_page" target="_blank" class="contact-btn messenger-btn" id="messengerBtn" title="Facebook Messenger">
-              <img src="images/icons/facebook-logo.png" alt="Messenger" class="logo-img">
+            <a href="https://m.me/your_facebook_page" target="_blank" class="contact-btn messenger-btn" id="messengerBtn" title="ติดต่อผ่าน Facebook Messenger" aria-label="ติดต่อผ่าน Facebook Messenger">
+              <img src="images/icons/facebook-logo.png" alt="โลโก้ Facebook Messenger สำหรับติดต่อบริการตรวจการ์ด" class="logo-img">
               <span>Messenger</span>
             </a>
-            <a href="tel:+66xxxxxxxxx" class="contact-btn phone-btn" id="phoneBtn" title="โทรศัพท์">
-              <img src="images/icons/phone-logo.png" alt="โทร" class="logo-img">
+            <a href="tel:+66xxxxxxxxx" class="contact-btn phone-btn" id="phoneBtn" title="โทรศัพท์ติดต่อ" aria-label="โทรศัพท์ติดต่อ">
+              <img src="images/icons/phone-logo.png" alt="ไอคอนโทรศัพท์สำหรับติดต่อบริการตรวจการ์ด" class="logo-img">
               <span>โทร</span>
             </a>
           </div>
@@ -88,7 +123,7 @@
     <div class="container">
       <div class="section-header">
         <div class="section-title-container">
-          <img src="images/logos/tcg-logo-nobg.png" alt="TCG JJPre Protect Logo" class="section-logo">
+          <img src="images/logos/tcg-logo-nobg.png" alt="โลโก้ TCG JJPre Protect" class="section-logo" loading="lazy">
           <h2 class="section-title">ขั้นตอนการตรวจ</h2>
         </div>
         <p class="section-subtitle">กระบวนการตรวจสอบที่เรียบง่ายและรวดเร็ว</p>
@@ -97,7 +132,7 @@
       <div class="steps-grid">
         <div class="step-card">
           <div class="step-icon">
-            <span class="icon">📋</span>
+            <span class="icon" aria-hidden="true">📋</span>
           </div>
           <div class="step-content">
             <div class="step-number">1</div>
@@ -108,7 +143,7 @@
         
         <div class="step-card">
           <div class="step-icon">
-            <span class="icon">📦</span>
+            <span class="icon" aria-hidden="true">📦</span>
           </div>
           <div class="step-content">
             <div class="step-number">2</div>
@@ -119,7 +154,7 @@
         
         <div class="step-card">
           <div class="step-icon">
-            <span class="icon">🔍</span>
+            <span class="icon" aria-hidden="true">🔍</span>
           </div>
           <div class="step-content">
             <div class="step-number">3</div>
@@ -130,7 +165,7 @@
         
         <div class="step-card">
           <div class="step-icon">
-            <span class="icon">📊</span>
+            <span class="icon" aria-hidden="true">📊</span>
           </div>
           <div class="step-content">
             <div class="step-number">4</div>
@@ -141,7 +176,7 @@
         
         <div class="step-card">
           <div class="step-icon">
-            <span class="icon">✈️</span>
+            <span class="icon" aria-hidden="true">✈️</span>
           </div>
           <div class="step-content">
             <div class="step-number">5</div>
@@ -158,11 +193,11 @@
     <div class="container">
       <div class="free-shipping-content">
         <div class="shipping-icon">
-          <span class="icon">✈️</span>
+          <span class="icon" aria-hidden="true">✈️</span>
         </div>
         <div class="shipping-text">
           <h2 class="shipping-title">ค่าขนส่งจากญี่ปุ่นมาไทย <span class="highlight">ส่งฟรี</span></h2>
-          <p class="shipping-description">สำหรับลูกค้าที่ใช้บริการตรวจการ์ดของเรา ไม่มีค่าขนส่งมาไทย<br><span class="airline-text">ขนส่งทางเครื่องบิน</span></p>
+          <p class="shipping-description">สำหรับลูกค้าที่ใช้บริการตรวจการ์ดของเรา ไม่มีค่าขนส่งมาไทย<br><span class="airline-text">!!! ขนส่งทางเครื่องบิน !!!</span></p>
         </div>
         <div class="shipping-badge">
           <span class="badge-text">FREE</span>
@@ -181,7 +216,7 @@
       
       <div class="report-content">
         <div class="report-image">
-      <img src="https://via.placeholder.com/600x400" alt="ตัวอย่างรายงานตรวจการ์ด" />
+      <img src="https://via.placeholder.com/600x400" alt="ภาพตัวอย่างรายงานตรวจการ์ด" loading="lazy" />
         </div>
         <div class="report-description">
       <p>ภาพขอบ/พื้นผิว/ฮอโล + Timestamp + Serial (ถ้ามี PSA slab)</p>
@@ -205,23 +240,23 @@
             
             <div class="problem-list">
               <div class="problem-item">
-                <div class="problem-icon">📦</div>
+                <div class="problem-icon" aria-hidden="true">📦</div>
                 <p>ของถูกส่งไปที่คลังสินค้าโดยตรงไม่สามารถแกะตรวจทีละใบได้ จึงทำได้แค่กดรับสินค้าไปเลย</p>
               </div>
               <div class="problem-item">
-                <div class="problem-icon">⏰</div>
+                <div class="problem-icon" aria-hidden="true">⏰</div>
                 <p>ระบบให้เวลาจำกัดในการกดรับของ ของถึงคลังไม่มีคนตรวจก็ต้องกดรับ</p>
               </div>
               <div class="problem-item">
-                <div class="problem-icon">🚫</div>
+                <div class="problem-icon" aria-hidden="true">🚫</div>
                 <p>ไม่สามารถตรวจสอบคุณภาพก่อนได้</p>
               </div>
               <div class="problem-item">
-                <div class="problem-icon">💸</div>
+                <div class="problem-icon" aria-hidden="true">💸</div>
                 <p>เสี่ยงเจอของปลอม/ของสอดไส้ จากชาวต่างชาติที่ลักลอบเอาเข้ามาปะปนขายในญี่ปุ่นเพราะเห็นช่องโหว่นี้</p>
               </div>
               <div class="problem-item">
-                <div class="problem-icon">⚠️</div>
+                <div class="problem-icon" aria-hidden="true">⚠️</div>
                 <p>เมื่อของถึงมือหากพบปัญหาลูกค้าไม่สามารถทำอะไรได้ เพราะกดรับสินค้าจากแพลตฟอร์มไปแล้ว/เกิดความเสียหาย</p>
               </div>
             </div>
@@ -233,19 +268,19 @@
             
             <div class="solution-list">
               <div class="solution-item">
-                <div class="solution-icon">🔍</div>
+                <div class="solution-icon" aria-hidden="true">🔍</div>
                 <p>ตรวจสภาพการ์ดโดยรวม และภาพจากกล้องจุลทรรศน์ + Blue Light</p>
               </div>
               <div class="solution-item">
-                <div class="solution-icon">📸</div>
+                <div class="solution-icon" aria-hidden="true">📸</div>
                 <p>รายงานภาพและวิดีโอชัดเจนให้สำหรับประกอบการตัดสินใจ</p>
               </div>
               <div class="solution-item">
-                <div class="solution-icon">⚡</div>
+                <div class="solution-icon" aria-hidden="true">⚡</div>
                 <p>ผลตรวจภายใน 24 ชั่วโมง</p>
               </div>
               <div class="solution-item">
-                <div class="solution-icon">🛡️</div>
+                <div class="solution-icon" aria-hidden="true">🛡️</div>
                 <p>ช่วยทำเรื่องคืนเงินถ้าเจอของปลอม</p>
               </div>
             </div>
@@ -256,16 +291,16 @@
           <div class="cta-box">
             <h3 class="cta-title">อย่าเสี่ยงกับเงินที่หามาอย่างยากลำบาก!</h3>
             <div class="contact-buttons">
-              <a href="https://line.me/ti/p/~your_line_id" target="_blank" class="contact-btn line-btn" id="articleLineBtn" title="LINE">
-                <img src="images/icons/line-logo.png" alt="LINE" class="logo-img">
+              <a href="https://line.me/ti/p/~your_line_id" target="_blank" class="contact-btn line-btn" id="articleLineBtn" title="ติดต่อผ่าน LINE" aria-label="ติดต่อผ่าน LINE">
+                <img src="images/icons/line-logo.png" alt="โลโก้ LINE สำหรับติดต่อบริการตรวจการ์ด" class="logo-img">
                 <span>LINE</span>
               </a>
-              <a href="https://m.me/your_facebook_page" target="_blank" class="contact-btn messenger-btn" id="articleMessengerBtn" title="Facebook Messenger">
-                <img src="images/icons/facebook-logo.png" alt="Messenger" class="logo-img">
+              <a href="https://m.me/your_facebook_page" target="_blank" class="contact-btn messenger-btn" id="articleMessengerBtn" title="ติดต่อผ่าน Facebook Messenger" aria-label="ติดต่อผ่าน Facebook Messenger">
+                <img src="images/icons/facebook-logo.png" alt="โลโก้ Facebook Messenger สำหรับติดต่อบริการตรวจการ์ด" class="logo-img">
                 <span>Messenger</span>
               </a>
-              <a href="tel:+66xxxxxxxxx" class="contact-btn phone-btn" id="articlePhoneBtn" title="โทรศัพท์">
-                <img src="images/icons/phone-logo.png" alt="โทร" class="logo-img">
+              <a href="tel:+66xxxxxxxxx" class="contact-btn phone-btn" id="articlePhoneBtn" title="โทรศัพท์ติดต่อ" aria-label="โทรศัพท์ติดต่อ">
+                <img src="images/icons/phone-logo.png" alt="ไอคอนโทรศัพท์สำหรับติดต่อบริการตรวจการ์ด" class="logo-img">
                 <span>โทร</span>
               </a>
             </div>
@@ -304,19 +339,19 @@
           <h3 class="info-title">🏆 ทำไมต้องเลือกเรา?</h3>
           <div class="info-list">
             <div class="info-item">
-              <div class="info-icon">✅</div>
+              <div class="info-icon" aria-hidden="true">✅</div>
               <p>มีประสบการณ์เกี่ยวกับการสั่งซื้อและการคืนสินค้ามากกว่า 5 ปี</p>
             </div>
             <div class="info-item">
-              <div class="info-icon">✅</div>
+              <div class="info-icon" aria-hidden="true">✅</div>
               <p>อุปกรณ์ตรวจระดับมืออาชีพ</p>
             </div>
             <div class="info-item">
-              <div class="info-icon">✅</div>
+              <div class="info-icon" aria-hidden="true">✅</div>
               <p>รีวิวจริงจากลูกค้าใน Facebook</p>
             </div>
             <div class="info-item">
-              <div class="info-icon">✅</div>
+              <div class="info-icon" aria-hidden="true">✅</div>
               <p>รับประกันความพึงพอใจ</p>
             </div>
           </div>
@@ -331,7 +366,7 @@
       <div class="footer-content">
         <div class="footer-logo">
           <div class="logo-container">
-            <img src="images/logos/tcg-logo.png" alt="TCG JJPre Protect Logo" class="logo-img">
+            <img src="images/logos/tcg-logo.png" alt="โลโก้ TCG JJPre Protect" class="logo-img" loading="lazy">
           </div>
           <span class="logo-text">TCG JJPre Protect</span>
         </div>
