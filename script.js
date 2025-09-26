@@ -11,24 +11,64 @@ function trackContactClick(buttonType, location) {
   });
 }
 
+// Utility: Safe event binding
+function bindClickById(id, handler) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.addEventListener('click', handler);
+  }
+  return !!el;
+}
+
 // Mobile Navigation Toggle
 function initMobileNav() {
   const navToggle = document.getElementById('nav-toggle');
   const navMenu = document.getElementById('nav-menu');
-  
+  const body = document.body;
+
+  function setExpanded(isExpanded) {
+    if (!navToggle || !navMenu) return;
+    navToggle.classList.toggle('active', isExpanded);
+    navMenu.classList.toggle('active', isExpanded);
+    navToggle.setAttribute('aria-expanded', String(isExpanded));
+    body.style.overflow = isExpanded ? 'hidden' : '';
+  }
+
+  function toggleMenu() {
+    if (!navToggle || !navMenu) return;
+    const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+    setExpanded(!expanded);
+  }
+
   if (navToggle && navMenu) {
-    navToggle.addEventListener('click', function() {
-      navToggle.classList.toggle('active');
-      navMenu.classList.toggle('active');
+    // Click toggle
+    navToggle.addEventListener('click', toggleMenu);
+
+    // Keyboard: Enter/Space opens, Escape closes
+    navToggle.addEventListener('keydown', (e) => {
+      const key = e.key;
+      if (key === 'Enter' || key === ' ') {
+        e.preventDefault();
+        toggleMenu();
+      } else if (key === 'Escape') {
+        setExpanded(false);
+      }
     });
-    
-    // Close menu when clicking on a link
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      if (!expanded) return;
+      const target = e.target;
+      if (!navMenu.contains(target) && !navToggle.contains(target)) {
+        setExpanded(false);
+      }
+    });
+
+    // Close when clicking a nav link
     const navLinks = navMenu.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navToggle.classList.remove('active');
-        navMenu.classList.remove('active');
-      });
+      link.addEventListener('click', () => setExpanded(false));
     });
   }
 }
@@ -39,23 +79,28 @@ function initSmoothScroll() {
   
   navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
-      e.preventDefault();
       const targetId = this.getAttribute('href');
+      if (!targetId || targetId === '#') return;
       const targetSection = document.querySelector(targetId);
-      
-      if (targetSection) {
-        const offsetTop = targetSection.offsetTop - 80; // Account for fixed navbar
-        window.scrollTo({
-          top: offsetTop,
-          behavior: 'smooth'
-        });
-      }
+      if (!targetSection) return;
+      e.preventDefault();
+
+      const offsetTop = Math.max(0, targetSection.offsetTop - 80); // Account for fixed navbar
+      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
     });
   });
 }
 
 // Intersection Observer for animations
 function initScrollAnimations() {
+  const elements = document.querySelectorAll('.step-card, .problem-item, .solution-item, .info-item');
+  if (!('IntersectionObserver' in window)) {
+    elements.forEach(el => {
+      el.classList.add('visible');
+    });
+    return;
+  }
+
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -65,49 +110,34 @@ function initScrollAnimations() {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
       }
     });
   }, observerOptions);
   
-  // Observe elements for animation
-  const animatedElements = document.querySelectorAll('.step-card, .problem-item, .solution-item, .info-item');
-  animatedElements.forEach(el => {
+  elements.forEach(el => {
     el.classList.add('fade-in');
     observer.observe(el);
   });
 }
 
-// Header Contact Buttons
-document.getElementById("lineBtn").addEventListener("click", function() {
-  trackContactClick("line", "hero");
-});
+// Initialize contact button bindings safely
+function initContactButtons() {
+  bindClickById('lineBtn', () => trackContactClick('line', 'hero'));
+  bindClickById('messengerBtn', () => trackContactClick('messenger', 'hero'));
+  bindClickById('phoneBtn', () => trackContactClick('phone', 'hero'));
 
-document.getElementById("messengerBtn").addEventListener("click", function() {
-  trackContactClick("messenger", "hero");
-});
-
-document.getElementById("phoneBtn").addEventListener("click", function() {
-  trackContactClick("phone", "hero");
-});
-
-// Article Contact Buttons
-document.getElementById("articleLineBtn").addEventListener("click", function() {
-  trackContactClick("line", "article");
-});
-
-document.getElementById("articleMessengerBtn").addEventListener("click", function() {
-  trackContactClick("messenger", "article");
-});
-
-document.getElementById("articlePhoneBtn").addEventListener("click", function() {
-  trackContactClick("phone", "article");
-});
+  bindClickById('articleLineBtn', () => trackContactClick('line', 'article'));
+  bindClickById('articleMessengerBtn', () => trackContactClick('messenger', 'article'));
+  bindClickById('articlePhoneBtn', () => trackContactClick('phone', 'article'));
+}
 
 // Initialize everything when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
   initMobileNav();
   initSmoothScroll();
   initScrollAnimations();
+  initContactButtons();
 });
 
 // Force Facebook widget to re-render
@@ -120,6 +150,7 @@ window.addEventListener('load', function() {
 // Navbar scroll effect
 window.addEventListener('scroll', function() {
   const navbar = document.querySelector('.navbar');
+  if (!navbar) return;
   if (window.scrollY > 100) {
     navbar.style.background = 'rgba(255, 255, 255, 0.98)';
     navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';

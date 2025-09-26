@@ -6,6 +6,7 @@
   <title>ตรวจการ์ด TCG จากญี่ปุ่น – TCG JJPre Protect</title>
 
   <meta name="description" content="บริการตรวจการ์ด TCG จาก Mercari ญี่ปุ่น ตรวจสอบด้วยกล้องจุลทรรศน์และ Blue Light มั่นใจก่อนกดรับสินค้า">
+  <meta name="robots" content="index,follow">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://tcg-jjpre.knox-thought.com/">
@@ -17,6 +18,7 @@
   <meta property="og:url" content="https://tcg-jjpre.knox-thought.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="TCG JJPre Protect">
+  <meta property="og:locale" content="th_TH">
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
@@ -25,8 +27,14 @@
   <meta name="twitter:image" content="https://tcg-jjpre.knox-thought.com/images/tcg-og.png">
 
   <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/images/favicons/favicon-192.png" sizes="192x192" type="image/png">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css?v=4" />
@@ -72,7 +80,7 @@
     <div class="nav-container">
       <div class="nav-logo">
         <div class="logo-container">
-          <img src="images/logos/tcg-logo.png" alt="โลโก้ TCG JJPre Protect" class="logo-img">
+          <img src="images/logos/tcg-logo.png" alt="โลโก้ TCG JJPre Protect" class="logo-img" width="45" height="45">
         </div>
         <span class="logo-text">TCG JJPre Protect</span>
       </div>
@@ -82,7 +90,7 @@
         <a href="#article-section" class="nav-link">ทำไมต้องตรวจ</a>
         <a href="#facebook" class="nav-link">ติดตามเรา</a>
       </div>
-      <div class="nav-toggle" id="nav-toggle" aria-label="เปิดเมนู" role="button" tabindex="0">
+      <div class="nav-toggle" id="nav-toggle" aria-label="เปิดเมนู" role="button" tabindex="0" aria-controls="nav-menu" aria-expanded="false">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
@@ -100,16 +108,16 @@
         
         <div class="hero-cta">
           <div class="contact-buttons">
-            <a href="https://line.me/ti/p/~your_line_id" target="_blank" class="contact-btn line-btn" id="lineBtn" title="ติดต่อผ่าน LINE" aria-label="ติดต่อผ่าน LINE">
-              <img src="images/icons/line-logo.png" alt="โลโก้ LINE สำหรับติดต่อบริการตรวจการ์ด" class="logo-img">
+            <a href="https://line.me/ti/p/~your_line_id" target="_blank" rel="noopener noreferrer" class="contact-btn line-btn" id="lineBtn" title="ติดต่อผ่าน LINE" aria-label="ติดต่อผ่าน LINE">
+              <img src="images/icons/line-logo.png" alt="โลโก้ LINE สำหรับติดต่อบริการตรวจการ์ด" class="logo-img" width="24" height="24">
               <span>LINE</span>
             </a>
-            <a href="https://m.me/your_facebook_page" target="_blank" class="contact-btn messenger-btn" id="messengerBtn" title="ติดต่อผ่าน Facebook Messenger" aria-label="ติดต่อผ่าน Facebook Messenger">
-              <img src="images/icons/facebook-logo.png" alt="โลโก้ Facebook Messenger สำหรับติดต่อบริการตรวจการ์ด" class="logo-img">
+            <a href="https://m.me/your_facebook_page" target="_blank" rel="noopener noreferrer" class="contact-btn messenger-btn" id="messengerBtn" title="ติดต่อผ่าน Facebook Messenger" aria-label="ติดต่อผ่าน Facebook Messenger">
+              <img src="images/icons/facebook-logo.png" alt="โลโก้ Facebook Messenger สำหรับติดต่อบริการตรวจการ์ด" class="logo-img" width="24" height="24">
               <span>Messenger</span>
             </a>
             <a href="tel:+66xxxxxxxxx" class="contact-btn phone-btn" id="phoneBtn" title="โทรศัพท์ติดต่อ" aria-label="โทรศัพท์ติดต่อ">
-              <img src="images/icons/phone-logo.png" alt="ไอคอนโทรศัพท์สำหรับติดต่อบริการตรวจการ์ด" class="logo-img">
+              <img src="images/icons/phone-logo.png" alt="ไอคอนโทรศัพท์สำหรับติดต่อบริการตรวจการ์ด" class="logo-img" width="24" height="24">
               <span>โทร</span>
             </a>
           </div>
@@ -123,7 +131,7 @@
     <div class="container">
       <div class="section-header">
         <div class="section-title-container">
-          <img src="images/logos/tcg-logo-nobg.png" alt="โลโก้ TCG JJPre Protect" class="section-logo" loading="lazy">
+          <img src="images/logos/tcg-logo-nobg.png" alt="โลโก้ TCG JJPre Protect" class="section-logo" loading="lazy" width="136" height="136">
           <h2 class="section-title">ขั้นตอนการตรวจ</h2>
         </div>
         <p class="section-subtitle">กระบวนการตรวจสอบที่เรียบง่ายและรวดเร็ว</p>
@@ -216,7 +224,7 @@
       
       <div class="report-content">
         <div class="report-image">
-      <img src="https://via.placeholder.com/600x400" alt="ภาพตัวอย่างรายงานตรวจการ์ด" loading="lazy" />
+      <img src="https://via.placeholder.com/600x400" alt="ภาพตัวอย่างรายงานตรวจการ์ด" loading="lazy" width="600" height="400" />
         </div>
         <div class="report-description">
       <p>ภาพขอบ/พื้นผิว/ฮอโล + Timestamp + Serial (ถ้ามี PSA slab)</p>
@@ -291,16 +299,16 @@
           <div class="cta-box">
             <h3 class="cta-title">อย่าเสี่ยงกับเงินที่หามาอย่างยากลำบาก!</h3>
             <div class="contact-buttons">
-              <a href="https://line.me/ti/p/~your_line_id" target="_blank" class="contact-btn line-btn" id="articleLineBtn" title="ติดต่อผ่าน LINE" aria-label="ติดต่อผ่าน LINE">
-                <img src="images/icons/line-logo.png" alt="โลโก้ LINE สำหรับติดต่อบริการตรวจการ์ด" class="logo-img">
+              <a href="https://line.me/ti/p/~your_line_id" target="_blank" rel="noopener noreferrer" class="contact-btn line-btn" id="articleLineBtn" title="ติดต่อผ่าน LINE" aria-label="ติดต่อผ่าน LINE">
+                <img src="images/icons/line-logo.png" alt="โลโก้ LINE สำหรับติดต่อบริการตรวจการ์ด" class="logo-img" width="24" height="24">
                 <span>LINE</span>
               </a>
-              <a href="https://m.me/your_facebook_page" target="_blank" class="contact-btn messenger-btn" id="articleMessengerBtn" title="ติดต่อผ่าน Facebook Messenger" aria-label="ติดต่อผ่าน Facebook Messenger">
-                <img src="images/icons/facebook-logo.png" alt="โลโก้ Facebook Messenger สำหรับติดต่อบริการตรวจการ์ด" class="logo-img">
+              <a href="https://m.me/your_facebook_page" target="_blank" rel="noopener noreferrer" class="contact-btn messenger-btn" id="articleMessengerBtn" title="ติดต่อผ่าน Facebook Messenger" aria-label="ติดต่อผ่าน Facebook Messenger">
+                <img src="images/icons/facebook-logo.png" alt="โลโก้ Facebook Messenger สำหรับติดต่อบริการตรวจการ์ด" class="logo-img" width="24" height="24">
                 <span>Messenger</span>
               </a>
               <a href="tel:+66xxxxxxxxx" class="contact-btn phone-btn" id="articlePhoneBtn" title="โทรศัพท์ติดต่อ" aria-label="โทรศัพท์ติดต่อ">
-                <img src="images/icons/phone-logo.png" alt="ไอคอนโทรศัพท์สำหรับติดต่อบริการตรวจการ์ด" class="logo-img">
+                <img src="images/icons/phone-logo.png" alt="ไอคอนโทรศัพท์สำหรับติดต่อบริการตรวจการ์ด" class="logo-img" width="24" height="24">
                 <span>โทร</span>
               </a>
             </div>
@@ -366,7 +374,7 @@
       <div class="footer-content">
         <div class="footer-logo">
           <div class="logo-container">
-            <img src="images/logos/tcg-logo.png" alt="โลโก้ TCG JJPre Protect" class="logo-img" loading="lazy">
+            <img src="images/logos/tcg-logo.png" alt="โลโก้ TCG JJPre Protect" class="logo-img" loading="lazy" width="35" height="35">
           </div>
           <span class="logo-text">TCG JJPre Protect</span>
         </div>
