@@ -1173,6 +1173,9 @@ section {
   .card-grid {
     grid-template-columns: 1fr;
   }
+  .hero {
+    padding-top: 120px;
+  }
   .card-frame {
     --tx: 0;
     --ty: 0;
@@ -1181,7 +1184,7 @@ section {
     margin: 0 auto;
     padding: clamp(2px, 0.6vw, 4px);
     --hover-x: 0px;
-    --hover-rise: 36px;
+    --hover-rise: 36%;
   }
   .card-media {
     width: 98%;
