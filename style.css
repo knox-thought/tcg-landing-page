@@ -309,7 +309,7 @@ body {
 }
 
 /* Desktop directional bias (5 cards) */
-.card-grid .card-frame:nth-child(1) { --tx: -40px; --r: -4deg; --hover-dx: 40px; }
+.card-grid .card-frame:nth-child(1) { --tx: -40px; --r: -2deg; --hover-dx: 40px; }
 .card-grid .card-frame:nth-child(2) { --tx: -20px; --r: -2deg; --hover-dx: 20px; }
 .card-grid .card-frame:nth-child(3) { --tx: 0px;  --r: 0deg;  --hover-dx: 0px; }
 .card-grid .card-frame:nth-child(4) { --tx: 20px;  --r: 2deg;  --hover-dx: -20px; }
