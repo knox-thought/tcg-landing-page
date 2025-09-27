@@ -1178,26 +1178,26 @@ section {
     --tx: 0;
     --ty: 0;
     --r: 0deg;
-    max-width: clamp(160px, 84vw, 200px);
+    max-width: clamp(160px, 82vw, 200px);
     margin: 0 auto;
     padding: clamp(2px, 0.6vw, 4px);
     --hover-x: 0px;
-    --hover-rise: 34%;
+    --hover-rise: 36%;
   }
   .card-grid .card-frame {
     position: relative;
   }
   .card-grid .card-frame:not(:first-child) {
-    margin-top: -42px;
+    margin-top: -56px;
   }
   .card-grid .card-frame:nth-child(odd) {
-    --tx: -24px;
-    --hover-x: 18px;
+    --tx: -36px;
+    --hover-x: 24px;
     z-index: 2;
   }
   .card-grid .card-frame:nth-child(even) {
-    --tx: 24px;
-    --hover-x: -18px;
+    --tx: 36px;
+    --hover-x: -24px;
     z-index: 3;
   }
   .card-grid .card-frame:nth-child(1) { z-index: 4; }
