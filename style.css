@@ -289,31 +289,31 @@ body {
   border-radius: 14px;
   padding: clamp(2px, 0.3vw, 4px);
   aspect-ratio: 3 / 4;
-  transition: transform .25s ease, box-shadow .25s ease;
+  transition: transform .35s ease, box-shadow .35s ease;
   box-shadow: 0 8px 24px rgba(0,0,0,0.18);
   position: relative;
   z-index: 1;
-  /* layered styling */
-  --r: 0deg; /* rotation */
-  --tx: 0px; /* translate-x */
-  --ty: 0px; /* translate-y */
-  --hover-x: 0px;
-  --hover-rise: 28%;
+  --r: 0deg;
+  --tx: 0px;
+  --ty: 0px;
+  --hover-dx: 0px;
+  --hover-rise: 55%;
+  transform-origin: bottom center;
   transform: translate(var(--tx), var(--ty)) rotate(var(--r));
 }
 
 .card-frame:hover {
-  transform: translate(calc(var(--tx) + var(--hover-x)), calc(var(--ty) - var(--hover-rise))) rotate(var(--r)) scale(1.08);
-  box-shadow: 0 24px 52px rgba(0,0,0,0.34);
-  z-index: 5;
+  transform: translate(calc(var(--tx) + var(--hover-dx)), calc(var(--ty) - var(--hover-rise))) rotate(var(--r)) scale(1.08);
+  box-shadow: 0 26px 54px rgba(0,0,0,0.36);
+  z-index: 6;
 }
 
-/* Directional hover pulls toward center (desktop) */
-.card-grid .card-frame:nth-child(1) { --hover-x: 36px; }
-.card-grid .card-frame:nth-child(2) { --hover-x: 18px; }
-.card-grid .card-frame:nth-child(3) { --hover-x: 0px; }
-.card-grid .card-frame:nth-child(4) { --hover-x: -18px; }
-.card-grid .card-frame:nth-child(5) { --hover-x: -36px; }
+/* Desktop directional bias (5 cards) */
+.card-grid .card-frame:nth-child(1) { --tx: -40px; --r: -4deg; --hover-dx: 40px; }
+.card-grid .card-frame:nth-child(2) { --tx: -20px; --r: -2deg; --hover-dx: 20px; }
+.card-grid .card-frame:nth-child(3) { --tx: 0px;  --r: 0deg;  --hover-dx: 0px; }
+.card-grid .card-frame:nth-child(4) { --tx: 20px;  --r: 2deg;  --hover-dx: -20px; }
+.card-grid .card-frame:nth-child(5) { --tx: 40px;  --r: 4deg;  --hover-dx: -40px; }
 
 /* Image inside frame */
 .card-media {
@@ -359,6 +359,7 @@ body {
   --fan-x: -50%;
   --fan-y: 0%;
   --fan-rot: 0deg;
+  --fan-hover-dx: 0%;
   transform: translate(var(--fan-x), var(--fan-y)) rotate(var(--fan-rot));
 }
 
@@ -370,16 +371,16 @@ body {
 }
 
 .fan-card:hover {
-  transform: translate(calc(var(--fan-x) * 0.65), calc(var(--fan-y) - 55%)) rotate(var(--fan-rot)) scale(1.08);
+  transform: translate(calc(var(--fan-x) + var(--fan-hover-dx)), calc(var(--fan-y) - 55%)) rotate(var(--fan-rot)) scale(1.08);
   box-shadow: 0 26px 54px rgba(0,0,0,0.36);
   z-index: 6;
 }
 
-.fan-card:nth-child(1) { --fan-x: -140%; --fan-y: 18%; --fan-rot: -20deg; }
-.fan-card:nth-child(2) { --fan-x: -80%;  --fan-y: 8%;  --fan-rot: -10deg; }
-.fan-card:nth-child(3) { --fan-x: -25%;  --fan-y: -12%; --fan-rot: 0deg;  z-index: 4; }
-.fan-card:nth-child(4) { --fan-x: 30%;   --fan-y: 8%;  --fan-rot: 10deg; }
-.fan-card:nth-child(5) { --fan-x: 85%;   --fan-y: 18%; --fan-rot: 20deg; }
+.fan-card:nth-child(1) { --fan-x: -140%; --fan-y: 18%; --fan-rot: -20deg; --fan-hover-dx: 140%; }
+.fan-card:nth-child(2) { --fan-x: -80%;  --fan-y: 8%;  --fan-rot: -10deg; --fan-hover-dx: 80%; }
+.fan-card:nth-child(3) { --fan-x: -25%;  --fan-y: -12%; --fan-rot: 0deg;  --fan-hover-dx: 25%;  z-index: 4; }
+.fan-card:nth-child(4) { --fan-x: 30%;   --fan-y: 8%;  --fan-rot: 10deg; --fan-hover-dx: -30%; }
+.fan-card:nth-child(5) { --fan-x: 85%;   --fan-y: 18%; --fan-rot: 20deg; --fan-hover-dx: -85%; }
 
 .hero-fan::after {
   content: '';
@@ -1031,19 +1032,18 @@ section {
     margin-left: 0;
     margin-bottom: 12px;
   }
-  .card-grid .card-frame:nth-child(1) { --hover-x: 24px; }
-  .card-grid .card-frame:nth-child(2) { --hover-x: 0px; }
-  .card-grid .card-frame:nth-child(3) { --hover-x: -24px; }
+  .card-grid .card-frame:nth-child(1) { --tx: -24px; --r: -2deg; --hover-dx: 24px; }
+  .card-grid .card-frame:nth-child(2) { --tx: 0px;   --r: -1deg; --hover-dx: 0px; }
+  .card-grid .card-frame:nth-child(3) { --tx: 24px;  --r: 0deg;  --hover-dx: -24px; }
 }
 
 @media (max-width: 768px) {
   .card-grid {
     grid-template-columns: repeat(2, minmax(140px, 1fr));
   }
-  /* Tablet layering (2-3 columns): reduce rotation/offset */
-  .card-frame { --tx: -8px; }
-  .card-grid .card-frame:nth-child(odd) { --r: -2deg; --hover-x: 14px; }
-  .card-grid .card-frame:nth-child(even) { --r: 2deg; --ty: 2px; --hover-x: -14px; }
+  .card-frame { --tx: 0px; --r: 0deg; }
+  .card-grid .card-frame:nth-child(odd) { --tx: -18px; --r: -1.5deg; --hover-dx: 18px; }
+  .card-grid .card-frame:nth-child(even) { --tx: 18px; --r: 1.5deg; --hover-dx: -18px; }
   .nav-menu {
     position: fixed;
     top: 80px;
@@ -1166,6 +1166,7 @@ section {
   .fan-card {
     width: clamp(130px, 28vw, 200px);
     bottom: -38%;
+    --fan-hover-dx: calc(var(--fan-x) * -0.7);
   }
 }
 
@@ -1175,33 +1176,23 @@ section {
     row-gap: 0;
   }
   .card-frame {
-    --tx: 0;
-    --ty: 0;
-    --r: 0deg;
     max-width: clamp(160px, 80vw, 190px);
-    margin: 0 auto;
     padding: clamp(2px, 0.6vw, 4px);
-    --hover-x: 0px;
-    --hover-rise: 55%;
+    --tx: 0px;
+    --ty: 0px;
+    --r: 0deg;
+    margin: 0 auto;
+    --hover-dx: 0px;
+    --hover-rise: 60%;
   }
   .card-grid .card-frame {
     position: relative;
   }
   .card-grid .card-frame:not(:first-child) {
-    margin-top: -80px;
+    margin-top: -100px;
   }
-  .card-grid .card-frame:nth-child(odd) {
-    --tx: -48px;
-    --hover-x: 32px;
-    z-index: 2;
-  }
-  .card-grid .card-frame:nth-child(even) {
-    --tx: 48px;
-    --hover-x: -32px;
-    z-index: 3;
-  }
-  .card-grid .card-frame:nth-child(1) { z-index: 4; }
-  .card-grid .card-frame:nth-child(5) { z-index: 1; }
+  .card-grid .card-frame:nth-child(odd) { --tx: -60px; --hover-dx: 60px; }
+  .card-grid .card-frame:nth-child(even) { --tx: 60px; --hover-dx: -60px; }
   .card-media {
     width: 98%;
     height: auto;
@@ -1217,9 +1208,10 @@ section {
     width: clamp(110px, 34vw, 160px);
     bottom: -26%;
     padding: clamp(2px, 0.6vw, 4px);
+    --fan-hover-dx: calc(var(--fan-x) * -1);
   }
   .fan-card:hover {
-    transform: translate(calc(var(--fan-x) * 0.55), calc(var(--fan-y) - 42%)) rotate(var(--fan-rot)) scale(1.08);
+    transform: translate(calc(var(--fan-x) + var(--fan-hover-dx)), calc(var(--fan-y) - 50%)) rotate(var(--fan-rot)) scale(1.08);
     box-shadow: 0 26px 54px rgba(0,0,0,0.36);
   }
   .section-header {
