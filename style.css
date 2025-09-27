@@ -370,9 +370,9 @@ body {
 }
 
 .fan-card:hover {
-  transform: translate(calc(var(--fan-x) * 0.7), calc(var(--fan-y) - 55%)) rotate(var(--fan-rot)) scale(1.08);
-  box-shadow: 0 26px 52px rgba(0,0,0,0.36);
-  z-index: 5;
+  transform: translate(calc(var(--fan-x) * 0.65), calc(var(--fan-y) - 55%)) rotate(var(--fan-rot)) scale(1.08);
+  box-shadow: 0 26px 54px rgba(0,0,0,0.36);
+  z-index: 6;
 }
 
 .fan-card:nth-child(1) { --fan-x: -140%; --fan-y: 18%; --fan-rot: -20deg; }
@@ -1178,26 +1178,26 @@ section {
     --tx: 0;
     --ty: 0;
     --r: 0deg;
-    max-width: clamp(160px, 82vw, 200px);
+    max-width: clamp(160px, 80vw, 190px);
     margin: 0 auto;
     padding: clamp(2px, 0.6vw, 4px);
     --hover-x: 0px;
-    --hover-rise: 36%;
+    --hover-rise: 55%;
   }
   .card-grid .card-frame {
     position: relative;
   }
   .card-grid .card-frame:not(:first-child) {
-    margin-top: -56px;
+    margin-top: -80px;
   }
   .card-grid .card-frame:nth-child(odd) {
-    --tx: -36px;
-    --hover-x: 24px;
+    --tx: -48px;
+    --hover-x: 32px;
     z-index: 2;
   }
   .card-grid .card-frame:nth-child(even) {
-    --tx: 36px;
-    --hover-x: -24px;
+    --tx: 48px;
+    --hover-x: -32px;
     z-index: 3;
   }
   .card-grid .card-frame:nth-child(1) { z-index: 4; }
@@ -1220,6 +1220,7 @@ section {
   }
   .fan-card:hover {
     transform: translate(calc(var(--fan-x) * 0.55), calc(var(--fan-y) - 42%)) rotate(var(--fan-rot)) scale(1.08);
+    box-shadow: 0 26px 54px rgba(0,0,0,0.36);
   }
   .section-header {
     margin-bottom: 48px;
