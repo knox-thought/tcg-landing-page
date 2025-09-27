@@ -1006,6 +1006,22 @@ section {
   .fan-card {
     width: clamp(150px, 24vw, 220px);
   }
+  .section-title-container {
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+  }
+  .section-title-container .section-title {
+    position: static;
+    transform: none;
+    width: auto;
+    margin-top: 12px;
+    text-align: center;
+  }
+  .section-logo {
+    margin-left: 0;
+    margin-bottom: 12px;
+  }
 }
 
 @media (max-width: 768px) {
